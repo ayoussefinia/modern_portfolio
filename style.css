@@ -1,5 +1,8 @@
 /* https://images.axios.com/w8vC3nToCsPiYAWWXn4vtrIVR5w=/2019/08/13/1565716139469.gif */
 /* "https://wallpapercave.com/wp/wp3284839.gif */
+/* Start http://www.cursors-4u.com */ *
+body {cursor: url(http://cur.cursors-4u.net/cursors/cur-2/cur116.cur), auto !important;} 
+ /* End http://www.cursors-4u.com */
 body {
   background-image: url("https://cf.ltkcdn.net/widgets/gif2_stars.gif");
   background-size: cover;
@@ -9,6 +12,7 @@ body {
   padding: 0;
   grid-template-columns: 16.666% 16.666% 16.666% 16.666% 16.666% 16.6665%; 
   grid-template-rows: 25% 25% 25% 25%;
+  cursor: url('./spaceship.jpg'), crosshair;
 }
 /* .el50 {
   background: lightgreen;
@@ -33,14 +37,14 @@ body {
 } */
 .animate {
   border-radius: 50%;
-  box-shadow: 1px 1px 3px 3px white;
+  box-shadow: 1px 1px 3px 3px rgb(1, 0, 87);
   transform: scale(2);
 }
 
 
 .checker {
   /* border-radius: 0; */
-  background-color:  rgb(255, 255, 255);
+  background-color:  rgb(1, 0, 87);
   transform: rotateZ(360deg) scale(2);
   opacity: .3;
   box-shadow: none;
@@ -599,6 +603,16 @@ body {
 }
 
 @media  (max-width: 449px) {
+  .checker {
+    /* border-radius: 0; */
+    background-color:  rgb(1, 0, 87);
+
+  }
+  .animate {
+    
+    box-shadow: 1px 1px 3px 3px rgb(1, 0, 87);
+   
+  }
   .left-bar {
     width: 87vw;
     height: 67vh;
@@ -820,5 +834,82 @@ body {
     position: absolute;
     top: 33vh;
     left: 26vw;
+  }
+}
+
+.star-wars-text {
+  font-family: 'Anton', sans-serif;
+  color: rgb(216, 216, 76);
+  font-size: 3rem;
+  line-height: 3rem;
+  
+  width: 60vw;
+  height:100vh;
+  position: absolute;
+  bottom: 0;
+  right: 10vw;
+  transform: perspective(600px) rotateX(45deg) translateY(100vh);
+  
+  z-index: 30;
+}
+
+.star-wars-text-fade {
+  transition: transform 75s cubic-bezier(0.47, 0, 0.745, 0.715);
+  transform:   translateZ(-30000px) rotateX(90deg) translateY(-2000px);
+}
+
+
+
+/* .moon-1-orbit {
+  transform: rotateY(360deg);
+  transition: transform 10s linear;
+} */
+/* cubic-bezier(0.47, 0, 0.745, 0.715) */
+/* cubic-bezier(0.95, 0.05, 0.795, 0.035) */
+
+.container {
+  position: absolute;
+  top: -20%;
+  left: 35%;
+  margin: 150px auto;
+
+  width: 33%;
+  height: 33%;
+  perspective: 1000px;
+  perspective-origin: 500px;
+  transform: rotateX(15deg) rotateY(15deg);
+
+  /* transform: rotateX(10deg) rotateZ(5deg) rotateY(20deg); */
+  transform-style: preserve-3d;
+}
+
+.box2 {
+  position: absolute;
+  background: rgb(0, 0, 51);
+
+  border-radius: 50%;
+  width: 66%;
+  height: 66%;
+  transform: translateZ(-100rem);
+  color: white;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.container-rotate {
+  
+  /* transform: rotateY(270deg); */
+  animation: rotate 2s linear 200;
+  /* transition: transform 15s linear; */
+}
+
+@keyframes rotate {
+   0% {
+    transform: rotateY(0) ;
+
+  }
+
+  100% {
+    transform: rotateY(360deg) ;
   }
 }

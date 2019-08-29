@@ -4,7 +4,7 @@ var windowWidth = window.innerWidth;
 console.log(windowWidth);
 var shapes = $(".shape").toArray();
 console.log(shapes);
-if(windowWidth > 900) {
+if(windowWidth > 0) {
   for(i=1; i< shapes.length; i++) {
     console.log("in loop")
     var className = ".el"+i;
@@ -58,3 +58,5 @@ $(".left-bar-2").addClass("left-bar-2-open");
 $(".left-bar-3").addClass("left-bar-3-open");
 $(".left-bar-4").addClass("left-bar-4-open");
 $(".sphere").addClass("sphere-fall");
+$(".star-wars-text").addClass("star-wars-text-fade");
+$(".container").addClass("container-rotate");
