@@ -60,3 +60,40 @@ $(".left-bar-4").addClass("left-bar-4-open");
 $(".sphere").addClass("sphere-fall");
 $(".star-wars-text").addClass("star-wars-text-fade");
 $(".container").addClass("container-rotate");
+
+
+
+$(".hamburger-menu").on("click", function(){
+  console.log("clicked");
+  $(".hamburger-menu").addClass("side-bar-open");
+  if($(".top-bun").hasClass("top-bun-rotate")) {
+    $(".side-bar").removeClass("side-bar-fade-in");
+    // $(".side-bar").css("display", "none");
+    $(".top-bun").removeClass("top-bun-rotate");
+    $(".top-bun").addClass("top-bun-unrotate");
+    $(".meat").removeClass("meat-dissapear");
+    $(".meat").addClass("meat-reapear");
+    $(".bottom-bun").removeClass("bottom-bun-rotate");
+    $(".bottom-bun").addClass("bottom-bun-unrotate");
+    
+  }
+  else{
+    // $(".side-bar").css("display", "inline-flex");
+    $(".side-bar").addClass("side-bar-fade-in");
+    $(".top-bun").removeClass("top-bun-unrotate");
+    $(".meat").removeClass("meat-reapear");
+    $(".bottom-bun").removeClass("bottom-bun-unrotate");
+    $(".top-bun").addClass("top-bun-rotate");
+    $(".meat").addClass("meat-dissapear");
+    $(".bottom-bun").addClass("bottom-bun-rotate");
+  }
+
+})
+
+// $("body").on("click", ".side-bar-open",function() {
+//   console.log("x clicked")
+//   // $(".hamburger-menu").removeClass("side-bar-open");
+//   // $(".top-bun").removeClass("top-bun-rotate");
+//   // $(".meat").removeClass("meat-dissapear");
+//   // $(".bottom-bun").removeClass("bottom-bun-rotate");
+// }) 
